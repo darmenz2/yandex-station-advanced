@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Recover and inspect known Git blobs
+      - name: Recover known source objects for verification
         shell: python
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          import base64, hashlib, io, json, lzma, os, pathlib, tarfile, urllib.request
+          import base64, hashlib, json, os, pathlib, urllib.request
           shas = '''ae0da9e16c06649010b54516cbc44aa8c782fb0d
           a6c0c5c229beadbb8ee7c37d74a0ed9307302b9f
           25fee2eab7d6507c1bc16af6ba36e3816afbff71
@@ -28,41 +28,15 @@ jobs:
           fb6d36238fa25c4c6f12d50eda3ef76be8e399a9
           538453d3c1ffe777e00f38251ea0cbb0f5d3e9a0
           ce074d67af6140270ba29fec742ceb55a09aaca7'''.split()
-          parts = []
-          for sha in shas:
+          output = pathlib.Path('recovered'); output.mkdir()
+          for index, sha in enumerate(shas):
               request = urllib.request.Request('https://api.github.com/repos/darmenz2/yandex-station-advanced/git/blobs/' + sha, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
               with urllib.request.urlopen(request, timeout=30) as response:
                   data = json.load(response)
               raw = base64.b64decode(data['content'])
               assert hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == sha
-              parts.append(raw)
-              print('PART', sha, len(raw), flush=True)
-          compressed = b''.join(parts)
-          decoder = lzma.LZMADecompressor(memlimit=268435456)
-          raw = decoder.decompress(compressed, max_length=8388608)
-          assert len(raw) < 8388608
-          output = pathlib.Path('recovered'); output.mkdir()
-          (output / 'sources.tar.xz').write_bytes(compressed)
-          (output / 'available.tar').write_bytes(raw)
-          files = {}
-          error = None
-          try:
-              with tarfile.open(fileobj=io.BytesIO(raw), mode='r:') as tar:
-                  for entry in tar:
-                      p = pathlib.PurePosixPath(entry.name)
-                      assert entry.isfile() and not p.is_absolute() and '..' not in p.parts
-                      assert p.parts[0] not in ('.git', '.github', '.source-import')
-                      if entry.offset_data + entry.size > len(raw):
-                          break
-                      content = tar.extractfile(entry).read()
-                      files[entry.name] = {'size': len(content), 'sha256': hashlib.sha256(content).hexdigest()}
-          except tarfile.ReadError as exc:
-              error = type(exc).__name__
-          report = {'compressed_bytes': len(compressed), 'decompressed_bytes': len(raw), 'complete_xz': decoder.eof, 'tar_error': error, 'files': files}
-          (output / 'manifest.json').write_text(json.dumps(report, ensure_ascii=False, indent=2))
-          print('RECOVERED', len(files), 'files; complete_xz =', decoder.eof, flush=True)
-          for name, meta in files.items():
-              print('FILE', name, meta['size'], meta['sha256'], flush=True)
+              (output / ('part-%02d.bin' % index)).write_bytes(raw)
+              print('PART', index, sha, len(raw), raw[:12].hex(), flush=True)
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: recovered-source-chunks
