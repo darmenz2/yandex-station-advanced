@@ -1,0 +1,53 @@
+name: Import reviewed source snapshot
+on:
+  push:
+    branches: [main]
+    paths: ['.source-import/READY.json']
+permissions:
+  contents: write
+jobs:
+  import:
+    if: github.repository == 'darmenz2/yandex-station-advanced'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Verify and unpack the reviewed snapshot
+        shell: python
+        run: |
+          import hashlib, io, json, lzma, pathlib, subprocess, tarfile
+          root = pathlib.Path.cwd()
+          meta = json.loads((root / '.source-import/READY.json').read_text())
+          compressed = b''.join((root / '.source-import' / p['name']).read_bytes() for p in meta['parts'])
+          assert len(compressed) == meta['size']
+          assert hashlib.sha256(compressed).hexdigest() == meta['sha256'], 'Snapshot checksum mismatch'
+          for part in meta['parts']:
+              raw = (root / '.source-import' / part['name']).read_bytes()
+              assert hashlib.sha256(raw).hexdigest() == part['sha256'], 'Part checksum mismatch'
+          archive = lzma.decompress(compressed, memlimit=268435456)
+          assert len(archive) < 8388608
+          with tarfile.open(fileobj=io.BytesIO(archive), mode='r:') as tar:
+              members = tar.getmembers()
+              assert len(members) == len(meta['files'])
+              for entry in members:
+                  p = pathlib.PurePosixPath(entry.name)
+                  assert entry.isfile() and not p.is_absolute() and '..' not in p.parts
+                  assert p.parts[0] not in ('.git', '.github', '.source-import')
+                  assert entry.name in meta['files'] and entry.size < 2097152
+                  raw = tar.extractfile(entry).read()
+                  assert hashlib.sha256(raw).hexdigest() == meta['files'][entry.name]
+                  dst = root.joinpath(*p.parts)
+                  dst.parent.mkdir(parents=True, exist_ok=True)
+                  dst.write_bytes(raw)
+          subprocess.run(['git', 'add', '--', *meta['files']], check=True)
+          print('Verified source files:', len(meta['files']))
+      - name: Commit source files without rewriting history
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git commit -m 'Import Advanced preview.5 sources and isolated PCM 1.0.6 reference'
+          git push origin HEAD:main
