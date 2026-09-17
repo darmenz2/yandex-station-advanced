@@ -278,8 +278,11 @@
       "archive": "preview5",
       "source_path": "pytest.ini",
       "path": "pytest.ini",
-      "size": 75,
-      "sha256": "da9808d584f4d7bf9f89efb0e294727a7abd06903d9ae8fbc45f5dd93c59b684"
+      "size": 93,
+      "sha256": "cc78df40d1661d564a71419fb31871bee73b612fd4ff2e6229dea4bc177b0821",
+      "source_sha256": "da9808d584f4d7bf9f89efb0e294727a7abd06903d9ae8fbc45f5dd93c59b684",
+      "source_size": 75,
+      "transformation": "Added testpaths=tests to keep the isolated PCM 1.0.6 suite out of default discovery."
     },
     {
       "archive": "preview5",

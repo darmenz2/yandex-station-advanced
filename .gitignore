@@ -8,8 +8,8 @@ __pycache__/
 .coverage
 htmlcov/
 # Generated native code and distributions
-/build/
-/dist/
+build/
+dist/
 *.exe
 *.dll
 *.so
