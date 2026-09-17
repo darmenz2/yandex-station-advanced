@@ -1,0 +1,306 @@
+{
+  "product": "YandexStationAdvanced",
+  "version": "2.0.0-preview.5",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "ba25358760e9d6c1dc387ae3c627836093760a0937574f0108150a2be63789b3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "1a16f96e3dc1e2514f0bcd8511faf03f23f8abe37c4c1f92512d486bad00610b"
+    },
+    {
+      "path": "Run.cmd",
+      "sha256": "16f2743007d81f1a8603d54ddb448d629ebbc378695fbe8bac9b6c949fb41c5c"
+    },
+    {
+      "path": "Uninstall.exe",
+      "sha256": "11f3708b947d516710804b0aee4a2d421d6e76e23320dd132fbf837b466db09f"
+    },
+    {
+      "path": "YandexStationAdvanced.exe",
+      "sha256": "ec93c8cafdcefbf8cfaf8ecaa35bab01f7fc030a61e54ade8fe13ffc454dc774"
+    },
+    {
+      "path": "advanced/__init__.py",
+      "sha256": "a68f679bed2b634630c9ae8fe7172e9cc2acf0a3d495e3b913a86972d5844837"
+    },
+    {
+      "path": "advanced/calibration.py",
+      "sha256": "ffd8869783633bc487888b33391bc80c38582f20dfe07f9e91a1b427f0939763"
+    },
+    {
+      "path": "advanced/desktop.py",
+      "sha256": "0b779bed907c3ed7ee83d6906755c55da79213f50099561a8c0d8301d1dd1af3"
+    },
+    {
+      "path": "advanced/flyout.py",
+      "sha256": "ce0849fc3a2a663e8664b7c1cb12ba4be94ace73c2bd8f081cdb7ce820409d53"
+    },
+    {
+      "path": "advanced/flyout_model.py",
+      "sha256": "1253cc4169bbac973855bd1b248da3e94f073441445f8627a462ef7fc9b49932"
+    },
+    {
+      "path": "advanced/group.py",
+      "sha256": "47e1cdccad2dfbd0e95e543f63cc4727e3641ea52f2d3c4f938feb3498f5783b"
+    },
+    {
+      "path": "advanced/listener.py",
+      "sha256": "2c356dc31e368fabb96c11e91dce2c0157fc4eb9bc03c82ffc6e418a86a68aeb"
+    },
+    {
+      "path": "advanced/native/spatial_dsp.c",
+      "sha256": "320281226c39b260c083d597342bc707b17c3c6779200da2d86567148fe1d4e6"
+    },
+    {
+      "path": "advanced/native/spatial_dsp.dll",
+      "sha256": "868574bb63f2d8cb8c9ed525e0bbb12a9ad4b24b298e727dd0d761e227e2d454"
+    },
+    {
+      "path": "advanced/native_helper.py",
+      "sha256": "368f3b82c4a2b695401240a278d335d699fa3c5f6d85f244a8181bc6db795e0b"
+    },
+    {
+      "path": "advanced/native_mode.py",
+      "sha256": "4d17412145779ab99de6f012c9c639aab5d4ad50ffbe128d960516da47648126"
+    },
+    {
+      "path": "advanced/operations.py",
+      "sha256": "76725ac6ff044ab710083c45ebf676ad2e652f4aa9a58fa6dd96bd63f975f131"
+    },
+    {
+      "path": "advanced/reliable.py",
+      "sha256": "6298908a895b01bb1e8426b47b076f953210088f6b8f6aa90ba98eb5dd8605a7"
+    },
+    {
+      "path": "advanced/reliable_model.py",
+      "sha256": "fcdf871a24a42871732cf64ae6277b411a6696bd536764fa18b09dd55a41ce17"
+    },
+    {
+      "path": "advanced/spatial.py",
+      "sha256": "82ea140b883ae197f7c8728d5a66974fe4bc3ba6589c4b622bbcdafaa4d814c0"
+    },
+    {
+      "path": "advanced/steady_stream.py",
+      "sha256": "c84da2a130bfc71b0191792963b9178acce57fde2f2c35a3d7d42f9a6a3a19e2"
+    },
+    {
+      "path": "advanced/tray.py",
+      "sha256": "d75bc8edabb96b7d0cbb22e32645804a12a03183e33b5cb2d6f7b480f89162cf"
+    },
+    {
+      "path": "advanced/windows_audio.py",
+      "sha256": "16eb6d4b805c87b8a28d1735ccb43fc7940ea0eb9d1e0fe4ea37775f19adaa21"
+    },
+    {
+      "path": "advanced_entry.py",
+      "sha256": "9aa1da963c0690b82dc4965ebf5a2643c5c81a6e8308991a2275085ce75b3eb1"
+    },
+    {
+      "path": "assets/app.ico",
+      "sha256": "4557f2a72d307cb36c3bd938199addd99c6d147f899047077b9481f232304a33"
+    },
+    {
+      "path": "bootstrap.ps1",
+      "sha256": "48df5d7178dfc220c21c2cdda42dbf2d0c1a553e63264dcfad551e835ba778e3"
+    },
+    {
+      "path": "dependency_check.py",
+      "sha256": "c741a9c74308958b90eb965665292f76a9088b67c3eacb95a52f48f0c87621f9"
+    },
+    {
+      "path": "desktop_launcher.pyw",
+      "sha256": "5e9ed804c5e4408920840bc8370a09036d7e77aca50eefbbfd9e656a9d77de1f"
+    },
+    {
+      "path": "installer/Firewall.ps1",
+      "sha256": "0984775770d2122cbb12d413810c973c83e93f059c1c219ff0e6c18d5b83cb9e"
+    },
+    {
+      "path": "installer/GuiInstall.ps1",
+      "sha256": "cf6984bb773e86bc77923bddd09a49cfd857f8632ef4bed38413a9bdefd61ce7"
+    },
+    {
+      "path": "installer/Install-VBCable.ps1",
+      "sha256": "280a1a46805ac9a403a5c00e4f429e16dd59aaeb9e111af96357a4d61b8d0426"
+    },
+    {
+      "path": "installer/UninstallGui.ps1",
+      "sha256": "46288a26ea71c28964751b3ad494105ddeff27623d28ff7dfab8e5a4e955a833"
+    },
+    {
+      "path": "installer/build_dsp.py",
+      "sha256": "ef15781c56afb307479cbe7511de15b4b6f332a9004a832181fb17755f8a9437"
+    },
+    {
+      "path": "installer/build_setup.py",
+      "sha256": "c6f4f0f1168c681a9a32594d03620aaea327c06fa0077505f9641d8ae81c33db"
+    },
+    {
+      "path": "installer/launcher.c",
+      "sha256": "30f2af5629a74c6ca385af24f85b862bde3e831b51665635364d2c2d0fba2369"
+    },
+    {
+      "path": "installer/setup_gui.c",
+      "sha256": "fcdb828c1203ff2bbebaa8ff4f6708ba98d922139e9db259c7d82ca06a5d4233"
+    },
+    {
+      "path": "installer/winmini.h",
+      "sha256": "16fe9fd23991c0bc299f7c4d0cde5785892bcf4e06a514a476d6cbb4211f2003"
+    },
+    {
+      "path": "licenses/AlexxIT-YandexStation.txt",
+      "sha256": "5262cf579bd93f2b949409a818bd61b6548b7b1002eb62f218884be545a776ae"
+    },
+    {
+      "path": "main.py",
+      "sha256": "bf812ac470c2992689ee49c84125e20ca083955e5b29eab742387d6ba3874e95"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "8e8292593e5086d824f86ee1308a5566a6c12cab28e8e5806ab55eea0118d1c9"
+    },
+    {
+      "path": "station_bridge/__init__.py",
+      "sha256": "041778a0025f48df5236c1ae8ea8e70f87735fbec8e5fc67f14e2ce2be55fc4f"
+    },
+    {
+      "path": "station_bridge/access.py",
+      "sha256": "a384ceda03ff9296437c2bf368aa6433119f7c485eef91c32bc33e7a7556242e"
+    },
+    {
+      "path": "station_bridge/app.py",
+      "sha256": "4c9ec99759817f5ba7a3291800659b69509a93fa9ab40c9062b9c66b6c32f6db"
+    },
+    {
+      "path": "station_bridge/audio.py",
+      "sha256": "0b0e0b6d2199192c39970fb63ae0528ae2d08f894d15c58e1c64ea724f835145"
+    },
+    {
+      "path": "station_bridge/auth.py",
+      "sha256": "fe85747dc2e9ef82f24b5bf044ee523a3da45c10773e9bf402f9a49a0211ed9d"
+    },
+    {
+      "path": "station_bridge/continuity.py",
+      "sha256": "7a9039ab07384cab80b41d200973c0237498ce809a9ed0fd1ffcce91634da992"
+    },
+    {
+      "path": "station_bridge/discovery.py",
+      "sha256": "a6d391ba98f3c829669a838135cbe9a809c296ecacc01a29064ec891075d5362"
+    },
+    {
+      "path": "station_bridge/experimental_pcm.py",
+      "sha256": "5a2d4728d04633963f4422024ceb681405b85e667956644cb596f4677c3502a7"
+    },
+    {
+      "path": "station_bridge/live_stream.py",
+      "sha256": "f6ef89033c2735a61045b73913f142a73510c05a1381299297879ae2e393ed6c"
+    },
+    {
+      "path": "station_bridge/loopback.py",
+      "sha256": "01779909cc7e326cea02f236ad9bf78a60a3cceaf50efe4555607229941d6a39"
+    },
+    {
+      "path": "station_bridge/media.py",
+      "sha256": "69b3e3d1caa83fd6de1725e3c4912f0c84ea5133609fa220e6ba87f35415bd5c"
+    },
+    {
+      "path": "station_bridge/native_state.py",
+      "sha256": "e9d17d48e0b8155e4c04943337b84cbea48d7a4b8ea33f18e6f99eccb7cee8df"
+    },
+    {
+      "path": "station_bridge/network.py",
+      "sha256": "8ab2e4c06f1a3422e9c4e04185c713140a8a6157316d55ce0d9be88f2adcd8a0"
+    },
+    {
+      "path": "station_bridge/pcm_stream.py",
+      "sha256": "3579d4a68e186531b0a2515874bebf8c670e373ce9e6a3744129bd821ee36677"
+    },
+    {
+      "path": "station_bridge/protocol.py",
+      "sha256": "e4827a26cf8d08d74e3600d4c6d506beda40ecea4748c75608942711ca372e74"
+    },
+    {
+      "path": "station_bridge/realtime.py",
+      "sha256": "4d3d05ace5dcaf5297870457cd568ed55c58dfe5d8dbb00f9e5cfe0a8f3a979e"
+    },
+    {
+      "path": "station_bridge/security.py",
+      "sha256": "05a0f2b00565d1e6533a813c762a13c6b459735713e976876b8e473ebc049192"
+    },
+    {
+      "path": "station_bridge/stream_notify.py",
+      "sha256": "d3854c4f17fa84f0f9a953cac7400d12347a7508892bf3bca1a98de36ae7fe4c"
+    },
+    {
+      "path": "web/app.js",
+      "sha256": "39043dd0d8102e69bc4e26ef695ddf21a2d2ff618cd0d13e028b6767f811d879"
+    },
+    {
+      "path": "web/calibration-dsp.js",
+      "sha256": "f02ef926615749ca7564ed4fe97919de888e5e35b4acef09491689367f23ba6d"
+    },
+    {
+      "path": "web/calibration-worker.js",
+      "sha256": "cbb063ab039811eac5f9bc35ff9b5699b73c404498ce41144f71a663ef7cf7f9"
+    },
+    {
+      "path": "web/calibration-worklet.js",
+      "sha256": "60985f9c15b4c8c92ced5186450f7e98bdb86ebbe86923000aeb34cddd531f83"
+    },
+    {
+      "path": "web/calibration.css",
+      "sha256": "1a370c4a78ca3a760e220db1d3b86d113ff5d3e59c9e69d94b24b2176d77c682"
+    },
+    {
+      "path": "web/calibration.html",
+      "sha256": "40ea394da9fdd7ce900b52f40a5f5d69d73ffb7f4c9ad48f570f717e9ebb966a"
+    },
+    {
+      "path": "web/calibration.js",
+      "sha256": "c39325a76321abdf9fe9fa0397947cb4cd3f6360ffa5b43774f6aee58869a4a7"
+    },
+    {
+      "path": "web/desktop.css",
+      "sha256": "b1304957cd7570bd77deca07b8369f37f81b73043038e7b32c093bcc5b0a9f36"
+    },
+    {
+      "path": "web/desktop.html",
+      "sha256": "ba9a993a2d3d9ecdbedf15062327eb17dce44ba19651956f6d3c3598d5d1eba0"
+    },
+    {
+      "path": "web/desktop.js",
+      "sha256": "87f07ab0a14cda6e6ca4ddc2c62a40fb6c31b9ae365dcba300bc8f977e2de3a5"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "39f391a3933ffacc9110f89de2736a06d9c8abd045cf4b8df7b55076543aa150"
+    },
+    {
+      "path": "web/latency.css",
+      "sha256": "f335b3880e3daddbd1e1fd8acedf9cca06d4e9f49468be6c3f7e0a5c2dce403d"
+    },
+    {
+      "path": "web/latency.html",
+      "sha256": "837b03400c00223c0ed8f7ccf189adf8e6bb134dd1172bf9a2b4de1b74270fdb"
+    },
+    {
+      "path": "web/latency.js",
+      "sha256": "1d059713275d8ba9e27cbd24134812b9017e8cae1ad9faeb1370c95ab7f85f7e"
+    },
+    {
+      "path": "web/local-player.html",
+      "sha256": "c6d1ff2955d61f32d4c6faa4294263f94ed5175ee116d2936f89bd588b3315cf"
+    },
+    {
+      "path": "web/local-player.js",
+      "sha256": "dad506ffde23b7d62b1645a1f13d392a77d8868052550ee33733b2d24741632a"
+    },
+    {
+      "path": "web/style.css",
+      "sha256": "c84aebab54a386f84914ba66efee2c30d6b7863c4e855e8a43dbbd81b42312d2"
+    }
+  ]
+}

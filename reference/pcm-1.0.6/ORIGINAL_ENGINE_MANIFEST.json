@@ -1,0 +1,90 @@
+{
+  "source_archive": "StationBridge_1.0.6_PCM_Latency_Update.zip",
+  "engine_version": "1.0.6",
+  "unchanged": [
+    {
+      "path": "station_bridge/__init__.py",
+      "sha256": "38b5a3d3d0f415c546a958f40ac9ba195b7f7d5b679f5b2e49f59ced3049d2b3"
+    },
+    {
+      "path": "station_bridge/access.py",
+      "sha256": "a384ceda03ff9296437c2bf368aa6433119f7c485eef91c32bc33e7a7556242e"
+    },
+    {
+      "path": "station_bridge/app.py",
+      "sha256": "d6984f27647c52eceb92c2fbf89771dbc4541143edc7bb0551da4a03b73fb602"
+    },
+    {
+      "path": "station_bridge/audio.py",
+      "sha256": "ff850d849d9121ddffabb7b75c3bdc43eb587b8ad507fc6760be1578f41bcb73"
+    },
+    {
+      "path": "station_bridge/auth.py",
+      "sha256": "28db3c4d45a6748e79cc7039942de410189e36621f57c60294b5fb370c0faeeb"
+    },
+    {
+      "path": "station_bridge/discovery.py",
+      "sha256": "cbf1d637fe55cb45fbb08ebf038bae80b4a23d34fbb11b9d3015ab118929b80d"
+    },
+    {
+      "path": "station_bridge/live_stream.py",
+      "sha256": "ccb17c27cb3b602dc27e9acadf0139563ee9bd46a90c26b3fdc44770a60a1196"
+    },
+    {
+      "path": "station_bridge/loopback.py",
+      "sha256": "01779909cc7e326cea02f236ad9bf78a60a3cceaf50efe4555607229941d6a39"
+    },
+    {
+      "path": "station_bridge/media.py",
+      "sha256": "2a29d9643bcb3d1f39b0899071e9c05fdfc3b9058f2f249b6b28062b416e88a6"
+    },
+    {
+      "path": "station_bridge/network.py",
+      "sha256": "8ab2e4c06f1a3422e9c4e04185c713140a8a6157316d55ce0d9be88f2adcd8a0"
+    },
+    {
+      "path": "station_bridge/pcm_stream.py",
+      "sha256": "3579d4a68e186531b0a2515874bebf8c670e373ce9e6a3744129bd821ee36677"
+    },
+    {
+      "path": "station_bridge/protocol.py",
+      "sha256": "b94f5feeae1d72533bee90777f15ee1e48dc86e6abab6f643bd129e67d35fd3a"
+    },
+    {
+      "path": "station_bridge/realtime.py",
+      "sha256": "4d3d05ace5dcaf5297870457cd568ed55c58dfe5d8dbb00f9e5cfe0a8f3a979e"
+    },
+    {
+      "path": "station_bridge/security.py",
+      "sha256": "05a0f2b00565d1e6533a813c762a13c6b459735713e976876b8e473ebc049192"
+    },
+    {
+      "path": "web/app.js",
+      "sha256": "c9d59cc5b9aa62415ab13a15d4e3ca1a7edf09330709ed20b342685376a498e7"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "b218e86f443f2e420575f8a4fce32e4d394edbaeb91b97822dcf1e1f891d7560"
+    },
+    {
+      "path": "web/latency.css",
+      "sha256": "f335b3880e3daddbd1e1fd8acedf9cca06d4e9f49468be6c3f7e0a5c2dce403d"
+    },
+    {
+      "path": "web/latency.html",
+      "sha256": "837b03400c00223c0ed8f7ccf189adf8e6bb134dd1172bf9a2b4de1b74270fdb"
+    },
+    {
+      "path": "web/latency.js",
+      "sha256": "1d059713275d8ba9e27cbd24134812b9017e8cae1ad9faeb1370c95ab7f85f7e"
+    },
+    {
+      "path": "web/style.css",
+      "sha256": "62f0a24f843d148e0140132edfbb691731cec7fa1b862aba38d93812d516172b"
+    },
+    {
+      "path": "licenses/AlexxIT-YandexStation.txt",
+      "sha256": "5262cf579bd93f2b949409a818bd61b6548b7b1002eb62f218884be545a776ae"
+    }
+  ]
+}

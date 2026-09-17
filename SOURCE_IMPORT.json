@@ -1,0 +1,988 @@
+{
+  "format": 1,
+  "checked_remote_base": "f5144f925babd1aa1ab6fa3bedbde16363c8896b",
+  "preserved_license_git_blob": "ffd9482429c2244d7b0b1372e61fe091d60e36ff",
+  "archives": [
+    {
+      "id": "preview5",
+      "name": "YandexStationAdvanced_preview5_Source.zip",
+      "sha256": "3635ce1190701b425ff52a2688e15ea2464b636b949641aa0eedd89eb14f8279"
+    },
+    {
+      "id": "pcm106",
+      "name": "StationBridge_PCM106_Recovery.zip",
+      "sha256": "bf4ee76bff34d93b6da2ead486edf51c0ec44e79f320a1532fb70f00a15959d1"
+    }
+  ],
+  "files": [
+    {
+      "archive": "preview5",
+      "source_path": "LICENSE",
+      "path": "licenses/StationBridge-MIT.txt",
+      "size": 1199,
+      "sha256": "ba25358760e9d6c1dc387ae3c627836093760a0937574f0108150a2be63789b3"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "PAYLOAD_MANIFEST.json",
+      "path": "docs/archive/preview5-PAYLOAD_MANIFEST.json",
+      "size": 10221,
+      "sha256": "0f28dc689150a2c7064224224666ae7bcf60be647ec4b549b3b18a0cb7abfbf2"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "README.md",
+      "path": "docs/archive/preview5-README.md",
+      "size": 21142,
+      "sha256": "1a16f96e3dc1e2514f0bcd8511faf03f23f8abe37c4c1f92512d486bad00610b"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "Run.cmd",
+      "path": "Run.cmd",
+      "size": 464,
+      "sha256": "16f2743007d81f1a8603d54ddb448d629ebbc378695fbe8bac9b6c949fb41c5c"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/__init__.py",
+      "path": "advanced/__init__.py",
+      "size": 104,
+      "sha256": "a68f679bed2b634630c9ae8fe7172e9cc2acf0a3d495e3b913a86972d5844837"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/calibration.py",
+      "path": "advanced/calibration.py",
+      "size": 10715,
+      "sha256": "ffd8869783633bc487888b33391bc80c38582f20dfe07f9e91a1b427f0939763"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/desktop.py",
+      "path": "advanced/desktop.py",
+      "size": 12481,
+      "sha256": "0b779bed907c3ed7ee83d6906755c55da79213f50099561a8c0d8301d1dd1af3"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/flyout.py",
+      "path": "advanced/flyout.py",
+      "size": 13206,
+      "sha256": "ce0849fc3a2a663e8664b7c1cb12ba4be94ace73c2bd8f081cdb7ce820409d53"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/flyout_model.py",
+      "path": "advanced/flyout_model.py",
+      "size": 20998,
+      "sha256": "1253cc4169bbac973855bd1b248da3e94f073441445f8627a462ef7fc9b49932"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/group.py",
+      "path": "advanced/group.py",
+      "size": 24809,
+      "sha256": "47e1cdccad2dfbd0e95e543f63cc4727e3641ea52f2d3c4f938feb3498f5783b"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/listener.py",
+      "path": "advanced/listener.py",
+      "size": 1519,
+      "sha256": "2c356dc31e368fabb96c11e91dce2c0157fc4eb9bc03c82ffc6e418a86a68aeb"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/native/spatial_dsp.c",
+      "path": "advanced/native/spatial_dsp.c",
+      "size": 2806,
+      "sha256": "320281226c39b260c083d597342bc707b17c3c6779200da2d86567148fe1d4e6"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/native_helper.py",
+      "path": "advanced/native_helper.py",
+      "size": 2142,
+      "sha256": "368f3b82c4a2b695401240a278d335d699fa3c5f6d85f244a8181bc6db795e0b"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/native_mode.py",
+      "path": "advanced/native_mode.py",
+      "size": 9148,
+      "sha256": "4d17412145779ab99de6f012c9c639aab5d4ad50ffbe128d960516da47648126"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/operations.py",
+      "path": "advanced/operations.py",
+      "size": 5456,
+      "sha256": "76725ac6ff044ab710083c45ebf676ad2e652f4aa9a58fa6dd96bd63f975f131"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/reliable.py",
+      "path": "advanced/reliable.py",
+      "size": 24790,
+      "sha256": "6298908a895b01bb1e8426b47b076f953210088f6b8f6aa90ba98eb5dd8605a7"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/reliable_model.py",
+      "path": "advanced/reliable_model.py",
+      "size": 22766,
+      "sha256": "fcdf871a24a42871732cf64ae6277b411a6696bd536764fa18b09dd55a41ce17"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/spatial.py",
+      "path": "advanced/spatial.py",
+      "size": 8058,
+      "sha256": "82ea140b883ae197f7c8728d5a66974fe4bc3ba6589c4b622bbcdafaa4d814c0"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/steady_stream.py",
+      "path": "advanced/steady_stream.py",
+      "size": 17918,
+      "sha256": "c84da2a130bfc71b0191792963b9178acce57fde2f2c35a3d7d42f9a6a3a19e2"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/tray.py",
+      "path": "advanced/tray.py",
+      "size": 9785,
+      "sha256": "d75bc8edabb96b7d0cbb22e32645804a12a03183e33b5cb2d6f7b480f89162cf"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced/windows_audio.py",
+      "path": "advanced/windows_audio.py",
+      "size": 9889,
+      "sha256": "16eb6d4b805c87b8a28d1735ccb43fc7940ea0eb9d1e0fe4ea37775f19adaa21"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "advanced_entry.py",
+      "path": "advanced_entry.py",
+      "size": 7652,
+      "sha256": "9aa1da963c0690b82dc4965ebf5a2643c5c81a6e8308991a2275085ce75b3eb1"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "assets/app.ico",
+      "path": "assets/app.ico",
+      "size": 19619,
+      "sha256": "4557f2a72d307cb36c3bd938199addd99c6d147f899047077b9481f232304a33"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "bootstrap.ps1",
+      "path": "bootstrap.ps1",
+      "size": 8704,
+      "sha256": "48df5d7178dfc220c21c2cdda42dbf2d0c1a553e63264dcfad551e835ba778e3"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "dependency_check.py",
+      "path": "dependency_check.py",
+      "size": 3437,
+      "sha256": "c741a9c74308958b90eb965665292f76a9088b67c3eacb95a52f48f0c87621f9"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "desktop_launcher.pyw",
+      "path": "desktop_launcher.pyw",
+      "size": 1184,
+      "sha256": "5e9ed804c5e4408920840bc8370a09036d7e77aca50eefbbfd9e656a9d77de1f"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/Firewall.ps1",
+      "path": "installer/Firewall.ps1",
+      "size": 3101,
+      "sha256": "0984775770d2122cbb12d413810c973c83e93f059c1c219ff0e6c18d5b83cb9e"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/GuiInstall.ps1",
+      "path": "installer/GuiInstall.ps1",
+      "size": 13634,
+      "sha256": "cf6984bb773e86bc77923bddd09a49cfd857f8632ef4bed38413a9bdefd61ce7"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/Install-VBCable.ps1",
+      "path": "installer/Install-VBCable.ps1",
+      "size": 2679,
+      "sha256": "280a1a46805ac9a403a5c00e4f429e16dd59aaeb9e111af96357a4d61b8d0426"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/UninstallGui.ps1",
+      "path": "installer/UninstallGui.ps1",
+      "size": 4935,
+      "sha256": "46288a26ea71c28964751b3ad494105ddeff27623d28ff7dfab8e5a4e955a833"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/build_dsp.py",
+      "path": "installer/build_dsp.py",
+      "size": 647,
+      "sha256": "ef15781c56afb307479cbe7511de15b4b6f332a9004a832181fb17755f8a9437"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/build_setup.py",
+      "path": "installer/build_setup.py",
+      "size": 8714,
+      "sha256": "c6f4f0f1168c681a9a32594d03620aaea327c06fa0077505f9641d8ae81c33db"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/launcher.c",
+      "path": "installer/launcher.c",
+      "size": 1744,
+      "sha256": "30f2af5629a74c6ca385af24f85b862bde3e831b51665635364d2c2d0fba2369"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/setup_gui.c",
+      "path": "installer/setup_gui.c",
+      "size": 21909,
+      "sha256": "fcdb828c1203ff2bbebaa8ff4f6708ba98d922139e9db259c7d82ca06a5d4233"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "installer/winmini.h",
+      "path": "installer/winmini.h",
+      "size": 6226,
+      "sha256": "16fe9fd23991c0bc299f7c4d0cde5785892bcf4e06a514a476d6cbb4211f2003"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "licenses/AlexxIT-YandexStation.txt",
+      "path": "licenses/AlexxIT-YandexStation.txt",
+      "size": 1064,
+      "sha256": "5262cf579bd93f2b949409a818bd61b6548b7b1002eb62f218884be545a776ae"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "main.py",
+      "path": "main.py",
+      "size": 1185,
+      "sha256": "bf812ac470c2992689ee49c84125e20ca083955e5b29eab742387d6ba3874e95"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "pytest.ini",
+      "path": "pytest.ini",
+      "size": 75,
+      "sha256": "da9808d584f4d7bf9f89efb0e294727a7abd06903d9ae8fbc45f5dd93c59b684"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "requirements.txt",
+      "path": "requirements.txt",
+      "size": 117,
+      "sha256": "8e8292593e5086d824f86ee1308a5566a6c12cab28e8e5806ab55eea0118d1c9"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/__init__.py",
+      "path": "station_bridge/__init__.py",
+      "size": 95,
+      "sha256": "041778a0025f48df5236c1ae8ea8e70f87735fbec8e5fc67f14e2ce2be55fc4f"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/access.py",
+      "path": "station_bridge/access.py",
+      "size": 4144,
+      "sha256": "a384ceda03ff9296437c2bf368aa6433119f7c485eef91c32bc33e7a7556242e"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/app.py",
+      "path": "station_bridge/app.py",
+      "size": 55828,
+      "sha256": "4c9ec99759817f5ba7a3291800659b69509a93fa9ab40c9062b9c66b6c32f6db"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/audio.py",
+      "path": "station_bridge/audio.py",
+      "size": 24770,
+      "sha256": "0b0e0b6d2199192c39970fb63ae0528ae2d08f894d15c58e1c64ea724f835145"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/auth.py",
+      "path": "station_bridge/auth.py",
+      "size": 10887,
+      "sha256": "fe85747dc2e9ef82f24b5bf044ee523a3da45c10773e9bf402f9a49a0211ed9d"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/continuity.py",
+      "path": "station_bridge/continuity.py",
+      "size": 5364,
+      "sha256": "7a9039ab07384cab80b41d200973c0237498ce809a9ed0fd1ffcce91634da992"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/discovery.py",
+      "path": "station_bridge/discovery.py",
+      "size": 2687,
+      "sha256": "a6d391ba98f3c829669a838135cbe9a809c296ecacc01a29064ec891075d5362"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/experimental_pcm.py",
+      "path": "station_bridge/experimental_pcm.py",
+      "size": 9367,
+      "sha256": "5a2d4728d04633963f4422024ceb681405b85e667956644cb596f4677c3502a7"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/live_stream.py",
+      "path": "station_bridge/live_stream.py",
+      "size": 4990,
+      "sha256": "f6ef89033c2735a61045b73913f142a73510c05a1381299297879ae2e393ed6c"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/loopback.py",
+      "path": "station_bridge/loopback.py",
+      "size": 10317,
+      "sha256": "01779909cc7e326cea02f236ad9bf78a60a3cceaf50efe4555607229941d6a39"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/media.py",
+      "path": "station_bridge/media.py",
+      "size": 29900,
+      "sha256": "69b3e3d1caa83fd6de1725e3c4912f0c84ea5133609fa220e6ba87f35415bd5c"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/native_state.py",
+      "path": "station_bridge/native_state.py",
+      "size": 5140,
+      "sha256": "e9d17d48e0b8155e4c04943337b84cbea48d7a4b8ea33f18e6f99eccb7cee8df"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/network.py",
+      "path": "station_bridge/network.py",
+      "size": 7392,
+      "sha256": "8ab2e4c06f1a3422e9c4e04185c713140a8a6157316d55ce0d9be88f2adcd8a0"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/pcm_stream.py",
+      "path": "station_bridge/pcm_stream.py",
+      "size": 1385,
+      "sha256": "3579d4a68e186531b0a2515874bebf8c670e373ce9e6a3744129bd821ee36677"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/protocol.py",
+      "path": "station_bridge/protocol.py",
+      "size": 9708,
+      "sha256": "e4827a26cf8d08d74e3600d4c6d506beda40ecea4748c75608942711ca372e74"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/realtime.py",
+      "path": "station_bridge/realtime.py",
+      "size": 2040,
+      "sha256": "4d3d05ace5dcaf5297870457cd568ed55c58dfe5d8dbb00f9e5cfe0a8f3a979e"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/security.py",
+      "path": "station_bridge/security.py",
+      "size": 5186,
+      "sha256": "05a0f2b00565d1e6533a813c762a13c6b459735713e976876b8e473ebc049192"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "station_bridge/stream_notify.py",
+      "path": "station_bridge/stream_notify.py",
+      "size": 2773,
+      "sha256": "d3854c4f17fa84f0f9a953cac7400d12347a7508892bf3bca1a98de36ae7fe4c"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/__init__.py",
+      "path": "tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/conftest.py",
+      "path": "tests/conftest.py",
+      "size": 167,
+      "sha256": "fdb8ed09333f3c5677a951321f6d691294a6e982f9925b59bbdddb93ee4d6fd9"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_audio.py",
+      "path": "tests/test_audio.py",
+      "size": 2199,
+      "sha256": "4cae33967eaa7a5a823f432ff3dc6e6a2305b34fe0b668eb1aa046f8d74bf29e"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_audio_peer.py",
+      "path": "tests/test_audio_peer.py",
+      "size": 13959,
+      "sha256": "2c332d2732606a9f4d2960a7ae1ed8d8ce67a65d8e53354fc9249d86897e23c8"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_auth.py",
+      "path": "tests/test_auth.py",
+      "size": 3132,
+      "sha256": "2bc1264492de2a1a635a57762a99c25fc10fc9164abd0ae134606d4abd992ff4"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_bootstrap.py",
+      "path": "tests/test_bootstrap.py",
+      "size": 7148,
+      "sha256": "0103985363811a6db4ff61eb8e8f622c69084a5840c2a4f9cfa64d6795ce50f8"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_continuity_calibration.py",
+      "path": "tests/test_continuity_calibration.py",
+      "size": 13155,
+      "sha256": "b6ba09e90dd72fb6c209c68c889fbfa503ddaf00f200a3b343564a9768897a51"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_experimental_pcm.py",
+      "path": "tests/test_experimental_pcm.py",
+      "size": 13618,
+      "sha256": "7943750e47992ab2f823e25ee13549b994816fd9179af90dc32bb355c2225937"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_live_capture_fix.py",
+      "path": "tests/test_live_capture_fix.py",
+      "size": 14721,
+      "sha256": "c4fefe89355247c5af0199029185a0b7b3920296712f66b94bfcc10d2044219f"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_low_latency.py",
+      "path": "tests/test_low_latency.py",
+      "size": 10726,
+      "sha256": "28313e3b926fc74e13b93e417be00becb77ea988e266c3bf7333b92a08596218"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_network_fix.py",
+      "path": "tests/test_network_fix.py",
+      "size": 14579,
+      "sha256": "784d4126c3d8909c3fd858995b211b25b4b3932bfe167bee3cab7984b381ede8"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_pcm_fast.py",
+      "path": "tests/test_pcm_fast.py",
+      "size": 10502,
+      "sha256": "b65beceb7ac8f589ecb43174249f9b01207dbb7560ed7f17b82eca4a255a0aae"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_preview5_stability.py",
+      "path": "tests/test_preview5_stability.py",
+      "size": 12512,
+      "sha256": "04370ca82b009cb422f94f30a553d688a62da7eeade3a1686daea70110313721"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_protocol.py",
+      "path": "tests/test_protocol.py",
+      "size": 3761,
+      "sha256": "3df21e1bec356e6cb6cb034c69111fca24a520bbd271b6418ba953db219d4db8"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_reliable.py",
+      "path": "tests/test_reliable.py",
+      "size": 17654,
+      "sha256": "7bc6c7bc191793a427f89489f63a744ab89da071e3b2740a8bb258292d2d4244"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_servers.py",
+      "path": "tests/test_servers.py",
+      "size": 8234,
+      "sha256": "5039aa1758afc0e6a1da198f3904b06b07debba87cb95d037d83c9b20e6aa2f7"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "tests/test_setup_gui.py",
+      "path": "tests/test_setup_gui.py",
+      "size": 8508,
+      "sha256": "ae50d6b73d7fde4e45188d70bbd368fb0b5aedba1daf9c2ee5f3fd5364245ede"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "validation_preview5/TEST_REPORT.md",
+      "path": "validation_preview5/TEST_REPORT.md",
+      "size": 15897,
+      "sha256": "faee94c7151204509373bcd4438738208a629b8cb6dfa1c6a67bce849e2f7c62"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "validation_preview5/impaired_soak.py",
+      "path": "validation_preview5/impaired_soak.py",
+      "size": 7025,
+      "sha256": "750432d26c82b2b3879e4d940e3931dfda4b59635d13cf18d4ac9ab6e55ad21f"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "validation_preview5/reproduce_packet_loss.py",
+      "path": "validation_preview5/reproduce_packet_loss.py",
+      "size": 1682,
+      "sha256": "44d7e41d94e4e8e55d47fda39b940fe807e198437e808dcec5838f0b23603541"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/app.js",
+      "path": "web/app.js",
+      "size": 31623,
+      "sha256": "39043dd0d8102e69bc4e26ef695ddf21a2d2ff618cd0d13e028b6767f811d879"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/calibration-dsp.js",
+      "path": "web/calibration-dsp.js",
+      "size": 3170,
+      "sha256": "f02ef926615749ca7564ed4fe97919de888e5e35b4acef09491689367f23ba6d"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/calibration-worker.js",
+      "path": "web/calibration-worker.js",
+      "size": 219,
+      "sha256": "cbb063ab039811eac5f9bc35ff9b5699b73c404498ce41144f71a663ef7cf7f9"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/calibration-worklet.js",
+      "path": "web/calibration-worklet.js",
+      "size": 881,
+      "sha256": "60985f9c15b4c8c92ced5186450f7e98bdb86ebbe86923000aeb34cddd531f83"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/calibration.css",
+      "path": "web/calibration.css",
+      "size": 2108,
+      "sha256": "1a370c4a78ca3a760e220db1d3b86d113ff5d3e59c9e69d94b24b2176d77c682"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/calibration.html",
+      "path": "web/calibration.html",
+      "size": 7449,
+      "sha256": "40ea394da9fdd7ce900b52f40a5f5d69d73ffb7f4c9ad48f570f717e9ebb966a"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/calibration.js",
+      "path": "web/calibration.js",
+      "size": 15210,
+      "sha256": "c39325a76321abdf9fe9fa0397947cb4cd3f6360ffa5b43774f6aee58869a4a7"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/desktop.css",
+      "path": "web/desktop.css",
+      "size": 3908,
+      "sha256": "b1304957cd7570bd77deca07b8369f37f81b73043038e7b32c093bcc5b0a9f36"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/desktop.html",
+      "path": "web/desktop.html",
+      "size": 5942,
+      "sha256": "ba9a993a2d3d9ecdbedf15062327eb17dce44ba19651956f6d3c3598d5d1eba0"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/desktop.js",
+      "path": "web/desktop.js",
+      "size": 13740,
+      "sha256": "87f07ab0a14cda6e6ca4ddc2c62a40fb6c31b9ae365dcba300bc8f977e2de3a5"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/index.html",
+      "path": "web/index.html",
+      "size": 19345,
+      "sha256": "39f391a3933ffacc9110f89de2736a06d9c8abd045cf4b8df7b55076543aa150"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/latency.css",
+      "path": "web/latency.css",
+      "size": 1250,
+      "sha256": "f335b3880e3daddbd1e1fd8acedf9cca06d4e9f49468be6c3f7e0a5c2dce403d"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/latency.html",
+      "path": "web/latency.html",
+      "size": 3404,
+      "sha256": "837b03400c00223c0ed8f7ccf189adf8e6bb134dd1172bf9a2b4de1b74270fdb"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/latency.js",
+      "path": "web/latency.js",
+      "size": 3570,
+      "sha256": "1d059713275d8ba9e27cbd24134812b9017e8cae1ad9faeb1370c95ab7f85f7e"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/local-player.html",
+      "path": "web/local-player.html",
+      "size": 4166,
+      "sha256": "c6d1ff2955d61f32d4c6faa4294263f94ed5175ee116d2936f89bd588b3315cf"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/local-player.js",
+      "path": "web/local-player.js",
+      "size": 8548,
+      "sha256": "dad506ffde23b7d62b1645a1f13d392a77d8868052550ee33733b2d24741632a"
+    },
+    {
+      "archive": "preview5",
+      "source_path": "web/style.css",
+      "path": "web/style.css",
+      "size": 10696,
+      "sha256": "c84aebab54a386f84914ba66efee2c30d6b7863c4e855e8a43dbbd81b42312d2"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "LICENSE",
+      "path": "reference/pcm-1.0.6/LICENSE",
+      "size": 1199,
+      "sha256": "ba25358760e9d6c1dc387ae3c627836093760a0937574f0108150a2be63789b3"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "ORIGINAL_ENGINE_MANIFEST.json",
+      "path": "reference/pcm-1.0.6/ORIGINAL_ENGINE_MANIFEST.json",
+      "size": 2980,
+      "sha256": "7457d1ec587969a2e7ee58fbfd7cecd64e5c21339bb149ae0f74d707fcdb7759"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "SOURCE_REFERENCES.md",
+      "path": "reference/pcm-1.0.6/SOURCE_REFERENCES.md",
+      "size": 13766,
+      "sha256": "80575d5254fdecf3b4c33fd349b0bea083e35528984279699af720e3e74cdfac"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "START_HERE_RU.txt",
+      "path": "reference/pcm-1.0.6/START_HERE_RU.txt",
+      "size": 5893,
+      "sha256": "baad8bdda21f566d3ec59a37acd2d41fa7621824ce088d35ef1512cb0f4fc868"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "VALIDATION_RU.md",
+      "path": "reference/pcm-1.0.6/VALIDATION_RU.md",
+      "size": 4564,
+      "sha256": "370c81431154afd144fc92e8fbe47a47faa065705271951c1df7b07f317002ab"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "launcher_source/app.ico",
+      "path": "reference/pcm-1.0.6/launcher_source/app.ico",
+      "size": 19619,
+      "sha256": "4557f2a72d307cb36c3bd938199addd99c6d147f899047077b9481f232304a33"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "launcher_source/build_launcher.py",
+      "path": "reference/pcm-1.0.6/launcher_source/build_launcher.py",
+      "size": 2471,
+      "sha256": "a610f7c678a6cb81b33c3a113b76ab1a0fdf0d7cf0ec2de9e852f0e6ee028ec9"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "launcher_source/launch.c",
+      "path": "reference/pcm-1.0.6/launcher_source/launch.c",
+      "size": 3040,
+      "sha256": "492eb56016430bdeaf1e0dad04dc657b18b68e49980ed324b46ddfc423b1ab84"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "launcher_source/winmini.h",
+      "path": "reference/pcm-1.0.6/launcher_source/winmini.h",
+      "size": 6226,
+      "sha256": "16fe9fd23991c0bc299f7c4d0cde5785892bcf4e06a514a476d6cbb4211f2003"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "licenses/AlexxIT-YandexStation.txt",
+      "path": "reference/pcm-1.0.6/licenses/AlexxIT-YandexStation.txt",
+      "size": 1064,
+      "sha256": "5262cf579bd93f2b949409a818bd61b6548b7b1002eb62f218884be545a776ae"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "recovery_start.py",
+      "path": "reference/pcm-1.0.6/recovery_start.py",
+      "size": 9598,
+      "sha256": "ac4f81b6ef4418710cd71a8c51bf49cf9545b1be48fd9f411bc446d668325fab"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/__init__.py",
+      "path": "reference/pcm-1.0.6/station_bridge/__init__.py",
+      "size": 95,
+      "sha256": "38b5a3d3d0f415c546a958f40ac9ba195b7f7d5b679f5b2e49f59ced3049d2b3"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/access.py",
+      "path": "reference/pcm-1.0.6/station_bridge/access.py",
+      "size": 4144,
+      "sha256": "a384ceda03ff9296437c2bf368aa6433119f7c485eef91c32bc33e7a7556242e"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/app.py",
+      "path": "reference/pcm-1.0.6/station_bridge/app.py",
+      "size": 40949,
+      "sha256": "d6984f27647c52eceb92c2fbf89771dbc4541143edc7bb0551da4a03b73fb602"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/audio.py",
+      "path": "reference/pcm-1.0.6/station_bridge/audio.py",
+      "size": 21734,
+      "sha256": "ff850d849d9121ddffabb7b75c3bdc43eb587b8ad507fc6760be1578f41bcb73"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/auth.py",
+      "path": "reference/pcm-1.0.6/station_bridge/auth.py",
+      "size": 10717,
+      "sha256": "28db3c4d45a6748e79cc7039942de410189e36621f57c60294b5fb370c0faeeb"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/discovery.py",
+      "path": "reference/pcm-1.0.6/station_bridge/discovery.py",
+      "size": 2533,
+      "sha256": "cbf1d637fe55cb45fbb08ebf038bae80b4a23d34fbb11b9d3015ab118929b80d"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/live_stream.py",
+      "path": "reference/pcm-1.0.6/station_bridge/live_stream.py",
+      "size": 3888,
+      "sha256": "ccb17c27cb3b602dc27e9acadf0139563ee9bd46a90c26b3fdc44770a60a1196"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/loopback.py",
+      "path": "reference/pcm-1.0.6/station_bridge/loopback.py",
+      "size": 10317,
+      "sha256": "01779909cc7e326cea02f236ad9bf78a60a3cceaf50efe4555607229941d6a39"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/media.py",
+      "path": "reference/pcm-1.0.6/station_bridge/media.py",
+      "size": 21713,
+      "sha256": "2a29d9643bcb3d1f39b0899071e9c05fdfc3b9058f2f249b6b28062b416e88a6"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/network.py",
+      "path": "reference/pcm-1.0.6/station_bridge/network.py",
+      "size": 7392,
+      "sha256": "8ab2e4c06f1a3422e9c4e04185c713140a8a6157316d55ce0d9be88f2adcd8a0"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/pcm_stream.py",
+      "path": "reference/pcm-1.0.6/station_bridge/pcm_stream.py",
+      "size": 1385,
+      "sha256": "3579d4a68e186531b0a2515874bebf8c670e373ce9e6a3744129bd821ee36677"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/protocol.py",
+      "path": "reference/pcm-1.0.6/station_bridge/protocol.py",
+      "size": 8834,
+      "sha256": "b94f5feeae1d72533bee90777f15ee1e48dc86e6abab6f643bd129e67d35fd3a"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/realtime.py",
+      "path": "reference/pcm-1.0.6/station_bridge/realtime.py",
+      "size": 2040,
+      "sha256": "4d3d05ace5dcaf5297870457cd568ed55c58dfe5d8dbb00f9e5cfe0a8f3a979e"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "station_bridge/security.py",
+      "path": "reference/pcm-1.0.6/station_bridge/security.py",
+      "size": 5186,
+      "sha256": "05a0f2b00565d1e6533a813c762a13c6b459735713e976876b8e473ebc049192"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "test_recovery.py",
+      "path": "reference/pcm-1.0.6/test_recovery.py",
+      "size": 4991,
+      "sha256": "c074792d258590f1abf94184cf6182ecb96c7d14207b022d2bd771d1648820af"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "web/app.js",
+      "path": "reference/pcm-1.0.6/web/app.js",
+      "size": 26324,
+      "sha256": "c9d59cc5b9aa62415ab13a15d4e3ca1a7edf09330709ed20b342685376a498e7"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "web/index.html",
+      "path": "reference/pcm-1.0.6/web/index.html",
+      "size": 16650,
+      "sha256": "b218e86f443f2e420575f8a4fce32e4d394edbaeb91b97822dcf1e1f891d7560"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "web/latency.css",
+      "path": "reference/pcm-1.0.6/web/latency.css",
+      "size": 1250,
+      "sha256": "f335b3880e3daddbd1e1fd8acedf9cca06d4e9f49468be6c3f7e0a5c2dce403d"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "web/latency.html",
+      "path": "reference/pcm-1.0.6/web/latency.html",
+      "size": 3404,
+      "sha256": "837b03400c00223c0ed8f7ccf189adf8e6bb134dd1172bf9a2b4de1b74270fdb"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "web/latency.js",
+      "path": "reference/pcm-1.0.6/web/latency.js",
+      "size": 3570,
+      "sha256": "1d059713275d8ba9e27cbd24134812b9017e8cae1ad9faeb1370c95ab7f85f7e"
+    },
+    {
+      "archive": "pcm106",
+      "source_path": "web/style.css",
+      "path": "reference/pcm-1.0.6/web/style.css",
+      "size": 10061,
+      "sha256": "62f0a24f843d148e0140132edfbb691731cec7fa1b862aba38d93812d516172b"
+    }
+  ],
+  "excluded": [
+    {
+      "archive": "preview5",
+      "path": "Uninstall.exe",
+      "reason": "Generated binary; source/build scripts are retained."
+    },
+    {
+      "archive": "preview5",
+      "path": "YandexStationAdvanced.exe",
+      "reason": "Generated binary; source/build scripts are retained."
+    },
+    {
+      "archive": "preview5",
+      "path": "advanced/native/spatial_dsp.dll",
+      "reason": "Generated binary; source/build scripts are retained."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/build.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/build_final.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/final_focused.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/first_regression.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/full_pytest_verbose.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/impaired_soak.json",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/impaired_soak.log",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/new_tests.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/package_validation.json",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/packet_loss_comparison.json",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/pcm_tests.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "preview5",
+      "path": "validation_preview5/second_regression.txt",
+      "reason": "Historical validation output; not application source. Original ZIP retains this record."
+    },
+    {
+      "archive": "pcm106",
+      "path": "Launch_PCM_106.exe",
+      "reason": "Generated binary; source/build scripts are retained."
+    },
+    {
+      "archive": "pcm106",
+      "path": "validation_result.txt",
+      "reason": "Historical validation output; original ZIP retained."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# Private runtimes and Python caches
+.runtime/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+# Generated native code and distributions
+/build/
+/dist/
+*.exe
+*.dll
+*.so
+*.obj
+*.lib
+*.exp
+*.res
+*.inc
+# Local account state and diagnostics: never publish these
+.env
+.env.*
+*.dpapi
+settings.json
+account.json
+tokens.json
+*.log
+diagnostics/
+reports/
+# Local editors and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

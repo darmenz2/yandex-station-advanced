@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Station Bridge</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<div class="shell">
+<header><div class="brand"><span class="brand-icon" aria-hidden="true">≋</span><div>Station Bridge<small>Звук Windows → Яндекс Станция</small></div></div><div class="head-actions"><span id="connectionBadge" class="badge">Не подключено</span><button id="exit" class="ghost small">Завершить</button></div></header>
+<div class="intro"><div><div class="eyebrow">ПО ЛОКАЛЬНОЙ СЕТИ</div><h1>Компьютер звучит<br>через Станцию.</h1><p>Файлы, уведомления и системный звук — без Home Assistant.<br>Войдите, выберите колонку и проверьте соединение.</p></div><div class="signal-card" aria-hidden="true"><div class="device pc">ПК</div><div class="signal"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="device station">Станция</div><div class="signal-caption">WASAPI · MP3 / HLS · Glagol</div></div></div>
+<div id="notice" class="notice hidden" role="status"></div>
+<div id="notWindows" class="notice warning hidden">Сейчас открыт не Windows: доступны интерфейс и сетевые функции. Захват звука требует Windows x64.</div>
+<section id="peerPanel" class="trust hidden" role="status" aria-live="polite">
+<strong>Аудио приходит через другой сетевой адрес</strong>
+<p id="peerDescription"></p>
+<p>Доступ только к текущему аудио по случайной ссылке, не ко всем файлам ПК. Разрешение сохраняется для этой Станции, её сертификата и IP компьютера. Общий IP роутера не удостоверяет личность устройства за ним; ссылку нельзя передавать другим.</p>
+<div class="row"><button id="peerApprove" class="primary">Разрешить адрес и повторить</button></div>
+</section>
+<div id="peerAllowed" class="callout hidden"><span id="peerAllowedText"></span> <button id="peerRevoke" class="ghost small">Отменить разрешение и остановить</button></div>
+<main>
+<section class="card setup"><div class="card-head"><div><h2>Подключение</h2><p>Аккаунт владельца и одна локальная сеть.</p></div><span class="chip">Glagol</span></div>
+<div class="account-row"><div><span class="label">АККАУНТ ЯНДЕКСА</span><strong id="accountName">Вход не выполнен</strong></div><button id="logout" class="ghost small hidden">Выйти</button></div>
+<div id="loginControls"><div class="row"><button id="login" class="primary">Войти по QR-коду</button><label class="check"><input id="remember" type="checkbox">Запомнить вход на этом ПК</label></div><p class="hint">Без пароля в приложении. Сохранённый вход защищается Windows DPAPI.</p>
+<div id="qrPanel" class="qr-panel hidden"><img id="qrImage" alt="QR-код входа в Яндекс"><div><strong>Отсканируйте камерой телефона</strong><p>Откройте ссылку и подтвердите вход в аккаунт, к которому привязана Станция.</p><p id="qrState" class="hint">Ожидаем подтверждения…</p></div></div>
+<details><summary>Вход по существующему токену</summary><p class="hint">x-token из авторизованной интеграции YandexStation или совместимый токен Яндекс Музыки. Обычный Smart Home OAuth может не подойти. Не отправляйте токен в чат.</p><div class="row"><select id="tokenKind" aria-label="Тип токена"><option value="x">x-token YandexStation</option><option value="music">Токен Яндекс Музыки</option></select><input id="token" type="password" autocomplete="off" placeholder="Токен остаётся на этом компьютере"><button id="tokenLogin" class="secondary">Войти</button></div></details></div>
+<div class="separator"></div>
+<div class="row between"><label class="label" for="devices">ВАША СТАНЦИЯ</label><button id="scan" class="ghost small">Найти колонки</button></div><select id="devices"><option value="">Нажмите «Найти колонки»</option></select><p id="deviceHint" class="hint">Поиск использует mDNS, а не сканирование всей сети.</p>
+<details id="manual"><summary>IP и параметры подключения</summary><div class="form-grid"><label>IP колонки<input id="host" placeholder="192.168.1.50" inputmode="decimal"></label><label>Порт Glagol<input id="port" type="number" value="1961" min="1" max="65535"></label><label>deviceId<input id="deviceId" autocomplete="off" placeholder="Из mDNS или аккаунта"></label><label>platform<input id="platform" autocomplete="off" placeholder="Из mDNS или аккаунта"></label></div><p class="hint">Не подставляйте название модели вместо platform. Если устройство найдено в аккаунте без IP, достаточно указать IP из приложения «Дом с Алисой» или роутера.</p></details>
+<div class="separator"></div>
+<label class="label" for="audioHost">IP КОМПЬЮТЕРА ДЛЯ АУДИО</label>
+<div class="row"><select id="audioHost"><option value="">Автоматически · адрес в сети Станции</option><option value="manual">Ввести IP компьютера вручную…</option></select><button id="refreshNetwork" class="ghost square" title="Обновить сетевые адреса" aria-label="Обновить сетевые адреса">↻</button></div>
+<label id="manualAudioHostLabel" class="hidden">Локальный IP компьютера<input id="manualAudioHost" placeholder="Адрес ПК, не колонки" inputmode="decimal"></label>
+<p id="networkHint" class="hint">Это адрес, с которого Станция забирает звук. При VPN выберите Wi-Fi/Ethernet домашней сети. Выбор применяется кнопкой «Подключиться».</p>
+<div class="row connect-row"><button id="connect" class="primary">Подключиться</button><button id="disconnect" class="secondary">Отключиться</button></div>
+<div id="trustPanel" class="trust hidden"><strong id="trustTitle">Подтвердите колонку</strong><p>Glagol использует собственный сертификат. Проверьте IP вашей Станции. После подтверждения отпечаток будет закреплён; изменение потребует нового разрешения.</p><code id="fingerprint"></code><div class="row"><button id="trustAccept" class="primary">Доверять этой колонке</button><button id="trustCancel" class="ghost">Отмена</button></div></div>
+</section>
+<div class="playback-column">
+<section class="card playback"><div class="card-head"><div><h2>Системный звук</h2><p>Захват звука выбранного выхода Windows.</p></div><span class="chip accent">Тестовый режим</span></div>
+<label class="label" for="outputs">ОТКУДА ЗАБИРАТЬ ЗВУК</label><div class="row"><select id="outputs"><option value="">Выход Windows по умолчанию</option></select><button id="refreshOutputs" class="ghost square" title="Обновить устройства" aria-label="Обновить устройства">↻</button></div>
+<div class="row audio-check-actions"><button id="probeAudio" class="secondary">Найти выход со звуком</button></div>
+<p class="hint">Сначала включите музыку на компьютере. Поиск измеряет все выходы 4 секунды, не сохраняет и не передаёт звук. Не выключайте звук браузера/плеера через Mute.</p>
+<div id="probePanel" class="hidden"><p id="probeSummary" class="hint"></p><div id="probeResults" class="probe-results"></div></div>
+<p id="captureDevice" class="hint">Выбранный источник будет проверен при запуске.</p>
+<div id="captureWarning" class="notice warning hidden" role="status"></div>
+<div class="meter-row"><span>Сигнал выбранного выхода</span><meter id="level" min="0" max="1" value="0" aria-label="Уровень захватываемого аудио"></meter><span id="levelText">—</span></div>
+<label class="label" for="transport">СПОСОБ ПЕРЕДАЧИ</label>
+<select id="transport"><option value="mp3">Прямой MP3 · рабочий режим</option><option value="pcm">WAV / PCM · без кодировщика · экспериментальный</option><option value="hls">HLS · совместимый рабочий режим</option></select>
+<p id="transportHint" class="hint">Прямой MP3 отправляется без HLS-сегментов. Если колонка его не воспроизводит, вернитесь к HLS. Буфер внутри Станции программой не измеряется.</p>
+<label class="label" for="latencyProfile">ПРОФИЛЬ ОЧЕРЕДЕЙ НА ПК</label>
+<select id="latencyProfile"><option value="fast">Минимум очередей · блок 10 мс · проверить устойчивость</option><option value="balanced">Устойчивый · блок 20 мс · настройки, близкие к 1.0.6</option></select>
+<p class="hint">Меньше очередь — меньше запас при скачках нагрузки. При щелчках выберите «Устойчивый». Для HLS профиль всегда устойчивый. В быстром профиле Windows запрашивается таймер 1 мс только на время трансляции: возможно увеличение энергопотребления.</p>
+<div class="row"><button id="live" class="primary wide">Транслировать звук ПК</button><button id="stop" class="stop">Остановить</button></div>
+<div class="row audio-check-actions"><button id="resync" class="secondary">К живому звуку</button><button id="streamTest" class="ghost">Тест выбранного режима</button></div>
+<p class="hint">«К живому звуку» перезапускает поток без старой очереди; возможна пауза. Используйте при накопившемся отставании, а не постоянно.</p>
+<div id="latencyStats" class="callout"><strong>Очереди на ПК</strong><p id="latencyText">Измерения появятся после запуска. Это не задержка от компьютера до динамика Станции.</p></div>
+<p class="hint"><a href="/latency.html" target="_blank" rel="noopener">Сравнить задержку Wi-Fi и Bluetooth: сигнал и индикатор</a>. Это отдельная страница без микрофона. Не закрывайте основную панель во время трансляции.</p>
+<details><summary>Проверка HLS без захвата Windows</summary><button id="hlsTest" class="secondary">Тест потока HLS</button><p class="hint">Программа создаёт негромкий тон и передаёт его тем же HLS-способом. Захват Windows не включается. Тест завершится автоматически примерно через 30 секунд. Если этот тон слышен, а музыка нет — проверьте источник Windows.</p></details>
+<details id="hlsBuffer"><summary>Буфер HLS</summary><label>Длительность HLS-сегмента<select id="segment"><option value="1">1 секунда · меньше задержка</option><option value="2">2 секунды · устойчивее при нестабильной сети</option></select></label></details>
+<div class="callout"><strong>Это не замена проводной аудиокарте.</strong> PCM дополнительно убирает кодировщик, но прошивка Станции может сохранять собственный буфер. Достижение задержки Bluetooth не подтверждено. Нулевая задержка не обещается. Не считайте этот режим пригодным для игр и видеосвязи без измерения на вашей колонке.</div>
+<p class="hint">Трансляция может включать разговоры и уведомления. Захват запускается только кнопкой. Микрофон не используется. Звук на самом ПК автоматически не отключается.</p>
+</section>
+<section class="card files"><div class="card-head"><div><h2>Файл или тестовый сигнал</h2><p>Начните с теста — он проверит путь ПК → колонка.</p></div></div><div class="row"><button id="test" class="secondary">Проверить звук</button><label class="file-button secondary">Выбрать аудиофайл<input id="file" type="file" accept=".mp3,.aac,.flac,.wav,.mp4,.m4a"></label></div><p id="fileName" class="hint">MP3 · WAV · FLAC · AAC · M4A · MP4 · до 256 МБ</p><div class="volume"><label for="volume">Громкость Станции <span id="volumeText">—</span></label><input id="volume" type="range" min="0" max="100" value="25"></div><details><summary>Произнести текст голосом Алисы</summary><div class="row"><input id="speech" maxlength="1000" value="Проверка связи. Компьютер подключён к Станции." aria-label="Текст для Алисы"><button id="say" class="secondary">Произнести</button></div><p class="hint">TTS проверяет команды Glagol, но не доступность аудиосервера. Для проверки HTTP нажмите «Проверить звук».</p></details></section>
+</div>
+<section class="card diagnostics"><div class="card-head"><div><h2>Что происходит</h2><p id="nowPlaying">Ожидаем подключения.</p></div><button id="diagnostic" class="ghost small">Скачать диагностику</button></div><div class="stats"><div><span>GLAGOL</span><strong id="sConnection">Не подключён</strong></div><div><span>АУДИОСЕРВЕР</span><strong id="sServer">Не запущен</strong></div><div><span>ЗАПРОСЫ АУДИО</span><strong id="sRequests">0</strong></div><div><span>HLS-СЕГМЕНТЫ</span><strong id="sSegments">0</strong></div></div><p id="networkStatus" class="hint"></p><p id="mediaStatus" class="hint">Подтверждение команды не равно слышимому звуку. Здесь отдельно отображается, запрашивает ли колонка аудио.</p><p class="hint">Диагностика содержит локальные IP и имена сетевых адаптеров и звуковых выходов, результаты измерения уровней. Аудиозаписи, токены, QR и данные аккаунта не включаются.</p><div id="logs" class="logs" aria-label="Журнал событий"></div></section>
+</main>
+<footer><span>Station Bridge <span id="version">1.0.6</span> · неофициальное приложение</span><span>Панель — только localhost. Аудио — Станции или подтверждённому посреднику.</span></footer>
+</div>
+</body></html>

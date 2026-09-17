@@ -1,0 +1,2 @@
+# Preserve the verified snapshot bytes, including PowerShell BOM/CRLF.
+* -text
