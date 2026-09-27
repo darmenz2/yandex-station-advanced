@@ -130,8 +130,5 @@ Workflow в `.github/workflows/` сохранены как часть прежн
 
 ## Лицензии
 
-Корневой [LICENSE](LICENSE) сохранён без изменений. Уведомление исходного комплекта
-Station Bridge находится в [licenses/StationBridge-MIT.txt](licenses/StationBridge-MIT.txt),
-уведомление AlexxIT — в [licenses/AlexxIT-YandexStation.txt](licenses/AlexxIT-YandexStation.txt).
 В каталоге PCM 1.0.6 также сохранены его лицензия и сведения об источниках.
 Проект не является продуктом Яндекса или VB-Audio и не заявляет об их поддержке.
